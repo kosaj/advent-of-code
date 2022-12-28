@@ -1,7 +1,7 @@
-import * as Utils from "./helpers/utils";
+import * as Utils from './helpers/utils';
 
 async function main(): Promise<void> {
-  await Utils.delay(500);
+  //TEST CODE HERE
 }
 
 try {

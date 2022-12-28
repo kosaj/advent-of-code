@@ -10,7 +10,7 @@ export function printTime<F extends AnyFunction>(fn: F) {
     const begin = Date.now();
     const func = fn(...args);
     console.log(
-      `Total execution time of '${fn["name"]}' is ${Date.now() - begin}ms.`
+      `Total execution time of '${fn['name']}' is ${Date.now() - begin}ms.`
     );
     return func;
   };
@@ -21,7 +21,7 @@ export function printTimeAsync<F extends AnyFunction>(fn: F) {
     const begin = Date.now();
     const func = await fn(...args);
     console.log(
-      `Total execution time of '${fn["name"]}' is ${Date.now() - begin}ms.`
+      `Total execution time of '${fn['name']}' is ${Date.now() - begin}ms.`
     );
     return func;
   };

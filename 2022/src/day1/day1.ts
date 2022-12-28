@@ -10,9 +10,13 @@ export function getElvesWithCalories(filename: FileInput): number[][] {
     .map((row: string) => row.split('\n').map(Number));
 }
 
-export function getElfMostCalories(elves: number[][]): number {
+export function getMostCaloriesOfTopElves(
+  elves: number[][],
+  numOfElves: number
+): number {
   return elves
     .map((calories) => calories.reduce((a, b) => a + b))
     .sort((a, b) => b - a)
-    .at(0);
+    .slice(0, numOfElves)
+    .reduce((a, b) => a + b);
 }
